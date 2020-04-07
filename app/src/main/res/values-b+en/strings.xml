@@ -1,0 +1,54 @@
+<resources>
+        <string name = "app_name">lalaLove</string>
+
+        <string name = "top_login_text"> Login </string>
+        <string name = "login"> Login </string>
+        <string name = "Pass"> Password </string>
+        <string name = "login_button_text"> Login </string>
+        <string name = "remember_password"> Forgot your password? </string>
+        <string name = "or_sing_up_using"> Or login using </string>
+        <string name = "type_login"> Enter username </string>
+        <string name = "type_pass"> Enter password </string>
+        <string name = "have_no_account"> Not a member yet? </string>
+        <string name = "REGISTER"> REGISTER </string>
+        <string name = "search"> SEARCH </string>
+        <string name = "profile"> PROFILE </string>
+        <string name = "articles"> ARTICLES </string>
+        <string name = "launch_error_message"> Error receiving data </string>
+        <string name = "type_mail"> Enter mail </string>
+        <string name = "type_phone"> Enter phone number </string>
+        <string name = "mail"> Mail </string>
+        <string name = "phone"> Phone number </string>
+        <string name = "gender"> Gender </string>
+        <string name = "recovery"> restore </string>
+        <string name = "form_error"> form filling error </string>
+        <string name = "send_button"> Send </string>
+        <string name = "form_theme_hint"> Subject </string>
+        <string name = "bach_form_text"> Feedback form </string>
+        <string name = "bach_form_description"> Description </string>
+        <string name = "enter_date_of_birth"> Enter a date of birth </string>
+        <string name = "i_search">I\'m looking for: </string>
+        <string name = "i_want_to_meet"> The Person I Will Meet: </string>
+        <string name = "purpose_of_dating"> Acquaintance purpose: </string>
+        <string name = "height"> Height: </string>
+        <string name = "weight"> Weight: </string>
+        <string name = "bodyType"> Build: </string>
+        <string name = "education"> Education: </string>
+        <string name = "knowledgeOfLanguages"> Languages: </string>
+        <string name = "attitudeTowardsSmoking"> Smoking: </string>
+        <string name = "attitudeToAlcohol"> Drinking habits: </string>
+        <string name = "orientation"> Orientation: </string>
+        <string name = "appearance"> Appearance: </string>
+        <string name = "my_details"> My details: </string>
+        <string name = "Children"> Children: </string>
+        <string name = "Live"> Accommodation: </string>
+        <string name = "money_state"> Material position: </string>
+        <string name = "fields"> required fields </string>
+        <string name = "age"> Age </string>
+    <string name="settings">SETTINGS</string>
+
+        <string-array name = "reg_data">
+            <item> Male </item>
+            <item> Woman </item>
+        </string-array>
+</resources>
