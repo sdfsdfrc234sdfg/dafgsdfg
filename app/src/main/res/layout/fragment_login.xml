@@ -12,7 +12,6 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="@drawable/color_accent_round"
-        app:layout_constraintBottom_toBottomOf="@+id/reg_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/login_form_container" />

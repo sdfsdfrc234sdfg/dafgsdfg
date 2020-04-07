@@ -37,7 +37,7 @@ public class ArticleFragment extends Fragment {
         int itemId = getArguments().getInt("id");
         ArticlesItem item = items.get(itemId);
 
-        binding.backArrow14.setOnClickListener(view1 -> {
+        binding.backArrow124.setOnClickListener(view1 -> {
 
             getActivity().onBackPressed();
         });

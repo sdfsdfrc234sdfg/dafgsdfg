@@ -6,7 +6,7 @@ import androidx.room.RoomDatabase;
 import com.lala.love.entities.dbData.ProfileInfo;
 import com.lala.love.entities.dbData.UserInfo;
 
-@Database(entities = {UserInfo.class, ProfileInfo.class}, version = 7)
+@Database(entities = {UserInfo.class, ProfileInfo.class}, version = 7, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     public abstract UserDao userDao();

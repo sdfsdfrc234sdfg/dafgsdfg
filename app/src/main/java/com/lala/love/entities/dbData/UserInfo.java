@@ -1,14 +1,15 @@
 package com.lala.love.entities.dbData;
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "user_info")
 public class UserInfo {
 
-
+    @Ignore
     public UserInfo () {}
-
+    @Ignore
     public UserInfo (String webViewUrl, Boolean auth) {
         this.webViewUrl = webViewUrl;
         this.auth = auth;
