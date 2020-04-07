@@ -28,17 +28,15 @@
             android:id="@+id/title_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:elevation="6dp"
             android:text="TextView"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/view17"
+            app:layout_constraintBottom_toBottomOf="@+id/back_arrow_124"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/back_arrow_14"
-            app:layout_constraintTop_toTopOf="@+id/view17" />
+            app:layout_constraintTop_toTopOf="@+id/back_arrow_124" />
 
         <TextView
             android:id="@+id/text"
@@ -67,16 +65,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/back_arrow_14"
+            android:id="@+id/back_arrow_124"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:clickable = "true"
-            android:focusable = "true"
+            android:clickable="true"
             android:elevation="7dp"
-            app:layout_constraintBottom_toTopOf="@+id/icon_img"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@+id/article_img"
             app:layout_constraintStart_toStartOf="@+id/view17"
             app:layout_constraintTop_toTopOf="@+id/view17"
             app:srcCompat="@drawable/ic_keyboard_backspace_black_24dp" />
