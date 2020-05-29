@@ -21,6 +21,7 @@ import com.world_compL.lv.MyApplication;
 import com.world_compL.lv.R;
 import com.world_compL.lv.ent.dbData.UrlItem;
 import com.world_compL.lv.other_files.DbRequest;
+import com.world_compL.lv.other_files.Utils;
 import com.world_compL.lv.other_files.WorkManagePr;
 
 import java.util.Objects;
@@ -35,9 +36,16 @@ public class WebViewFragment extends Fragment  implements CustomBackPress  {
     private String currentUrlItem = "";
     private Boolean goBack = false;
 
-    private String s, b ,c;
+    private String s, b ,c, f;
 
     private void initJs() {
+
+        String ip = Utils.getIPAddress(true);
+
+        f = "var first_script = document.createElement('script');\n";
+        f += "first_script.innerHTML = 'var yaParams = {ip:\""+ip+"\"};';\n";
+        f += "document.body.appendChild(first_script);";
+
         s = "var script = document.createElement('script');\n";
         s += "script.innerHTML = function test(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)};";
         s += "document.body.appendChild(script);";
@@ -53,6 +61,7 @@ public class WebViewFragment extends Fragment  implements CustomBackPress  {
 
     private void injectJS() {
 
+        webView.loadUrl("javascript:" + f);
         webView.loadUrl("javascript:" + s);
         webView.loadUrl("javascript:" + b);
         webView.loadUrl("javascript:" + c);
