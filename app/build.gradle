@@ -3,14 +3,14 @@ apply plugin: 'com.android.application'
 android {
 
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
 
     viewBinding {
         enabled = true
     }
 
     defaultConfig {
-        applicationId "com.lala.love"
+        applicationId "com.world_compL.lv"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -57,7 +57,7 @@ dependencies {
 
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation "androidx.viewpager2:viewpager2:1.0.0"
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta6'
 
     implementation 'com.google.android.material:material:1.1.0'
 
@@ -82,4 +82,10 @@ dependencies {
 
     implementation 'com.squareup.okhttp3:logging-interceptor:3.5.0'
     implementation "cz.ackee.useragent:useragent:1.0.4"
+
+    def work_version = "2.3.4"
+
+    implementation "androidx.work:work-runtime:$work_version"
+    implementation "androidx.work:work-gcm:$work_version"
+    androidTestImplementation "androidx.work:work-testing:$work_version"
 }

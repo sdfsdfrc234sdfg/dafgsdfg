@@ -23,7 +23,7 @@
             app:layout_constraintTop_toBottomOf="@+id/icon_img"
             app:srcCompat="@drawable/ic_place_black_24dp" />
 
-        <com.lala.love.util.TopCropImageView
+        <com.world_compL.lv.other_files.TopCropImageView
             android:id="@+id/icon_img"
             android:layout_width="0dp"
             android:layout_height="0dp"

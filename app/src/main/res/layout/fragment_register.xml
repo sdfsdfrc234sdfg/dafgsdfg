@@ -10,12 +10,12 @@
 
     <View
         android:id="@+id/view15"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/color_yell_round"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/heart_aconn_yell"
         app:layout_constraintBottom_toTopOf="@+id/login_form_container"
-        app:layout_constraintStart_toStartOf="@+id/login_form_container" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/login_form_container"
@@ -435,10 +435,11 @@
 
     <View
         android:id="@+id/view6"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="@drawable/color_accent_round"
-        app:layout_constraintBottom_toBottomOf="@+id/reg_login"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/heart_iconn"
+        android:rotation="-20"
+        app:layout_constraintBottom_toTopOf="@+id/reg_pass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/login_form_container"
@@ -448,11 +449,10 @@
         android:id="@+id/view7"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/color_accent_round"
+        android:background="@drawable/heart_iconn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

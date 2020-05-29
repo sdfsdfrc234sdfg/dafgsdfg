@@ -45,6 +45,7 @@
         <string name = "money_state"> Materialposition: </string>
         <string name = "fields"> erforderliche Felder </string>
         <string name = "age"> Alter </string>
+    <string name="message">neue Nachricht</string>
     <string name="settings">SETTINGS</string>
 
         <string-array name = "reg_data">

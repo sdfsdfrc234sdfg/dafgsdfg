@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         tools:context=".ui.ArticleFragment">
 
-        <com.lala.love.util.TopCropImageView
+        <com.world_compL.lv.other_files.TopCropImageView
             android:id="@+id/article_img"
             android:layout_width="0dp"
             android:layout_height="0dp"
