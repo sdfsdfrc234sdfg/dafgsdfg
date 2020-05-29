@@ -1,12 +1,10 @@
 <resources>
     <string name="app_name">lalaLove</string>
 
-    <string name="top_login_text">Login</string>
     <string name="login">Login</string>
     <string name="Pass">Password</string>
     <string name="login_button_text">Войти</string>
     <string name="remember_password">Забыли пароль?</string>
-    <string name="or_sing_up_using">Или войдите используя</string>
     <string name="type_login">Введите логин</string>
     <string name="type_pass">Ведите пароль</string>
     <string name="have_no_account">Еще не зарегистрированы?</string>

@@ -11,7 +11,6 @@
     <color name="card_transparent">#4D878787</color>
     <color name="fool_transparent">#00FFFFFF</color>
     <color name="card_transparent1">#68DFDFDF</color>
-    <color name="full_transparent">#00DFDFDF</color>
 
     <color name="text_color">#626262</color>
 
@@ -21,8 +20,6 @@
     <color name="text_color_main_white">#2C2C2C</color>
 
     <color name="hintColor">#60FFFFFF</color>
-    <color name="search_back">#28FFFFFF</color>
 
-    <color name="test">#ff8969</color>
     <color name="test2">#A53010</color>
 </resources>

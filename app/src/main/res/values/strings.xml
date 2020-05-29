@@ -1,13 +1,15 @@
 <resources>
-        <string name = "app_name">lalaLove</string>
+        <string name = "app_name">lalaLove</string><![CDATA[
 
-        <string name = "top_login_text"> Login </string>
-        <string name = "login"> Login </string>
+        
+        ]]>
+    <string name = "login"> Login </string>
         <string name = "Pass"> Password </string>
         <string name = "login_button_text"> Login </string>
-        <string name = "remember_password"> Forgot your password? </string>
-        <string name = "or_sing_up_using"> Or login using </string>
-        <string name = "type_login"> Enter username </string>
+        <string name = "remember_password"> Forgot your password? </string><![CDATA[
+        
+        ]]>
+    <string name = "type_login"> Enter username </string>
         <string name = "type_pass"> Enter password </string>
         <string name = "have_no_account"> Not a member yet? </string>
         <string name = "REGISTER"> REGISTER </string>
