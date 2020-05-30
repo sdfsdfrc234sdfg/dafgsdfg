@@ -55,7 +55,7 @@ public class WebViewFragment extends Fragment  implements CustomBackPress  {
         b += "document.body.appendChild(loader);";
 
         c = "var exe = document.createElement('script');\n";
-        c += "exe.innerHTML = ym(64330558, \"init\", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });";
+        c += "exe.innerHTML = ym(64330558, \"init\", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, params:window.yaParams });";
         c += "document.body.appendChild(exe);";
     }
 
