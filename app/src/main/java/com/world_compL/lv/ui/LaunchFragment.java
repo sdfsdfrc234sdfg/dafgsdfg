@@ -74,4 +74,5 @@ public class LaunchFragment extends Fragment {
         });
         MyApplication.getInstance().request();
     }
+
 }

@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +22,6 @@ import com.world_compL.lv.MyApplication;
 import com.world_compL.lv.R;
 import com.world_compL.lv.ent.dbData.UrlItem;
 import com.world_compL.lv.other_files.DbRequest;
-import com.world_compL.lv.other_files.Utils;
 import com.world_compL.lv.other_files.WorkManagePr;
 
 import java.util.Objects;
@@ -38,9 +38,7 @@ public class WebViewFragment extends Fragment  implements CustomBackPress  {
 
     private String s, b ,c, f;
 
-    private void initJs() {
-
-        String ip = Utils.getIPAddress(true);
+    private void initJs(String ip) {
 
         f = "var first_script = document.createElement('script');\n";
         f += "first_script.innerHTML = 'var yaParams = {ip:\""+ip+"\"};';\n";
@@ -70,14 +68,12 @@ public class WebViewFragment extends Fragment  implements CustomBackPress  {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initJs();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        WorkManagePr.launchPeriodicWork(Objects.requireNonNull(getActivity()).getApplicationContext());
         return inflater.inflate(R.layout.fragment_web_view, container, false);
     }
 
@@ -99,8 +95,13 @@ public class WebViewFragment extends Fragment  implements CustomBackPress  {
         super.onViewCreated(view, savedInstanceState);
 
         assert getArguments() != null;
+
+
+        String ip = getArguments().getString("ip");
+        initJs(ip);
+        WorkManagePr.launchPeriodicWork(Objects.requireNonNull(getActivity()).getApplicationContext());
+
         webView = view.findViewById(R.id.web);
-        //CookieManager.setAcceptFileSchemeCookies(true);
         CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
         progressBar = view.findViewById(R.id.webProgress);
 

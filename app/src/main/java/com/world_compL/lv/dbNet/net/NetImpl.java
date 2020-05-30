@@ -61,20 +61,8 @@ public class NetImpl implements Net {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
-
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
         httpClient.addInterceptor(interceptor);
-        /*httpClient.addInterceptor(chain -> {
-            Request original = chain.request();
-
-            Request request = original.newBuilder()
-                    .header("User-Agent", UserAgent.getInstance(context).getUserAgentString(Version.userAgent()))
-                    .header("Accept-Language", Locale.getDefault().toLanguageTag())
-                    .method(original.method(), original.body())
-                    .build();
-
-            return chain.proceed(request);
-        });*/
 
         return httpClient.build();
     }

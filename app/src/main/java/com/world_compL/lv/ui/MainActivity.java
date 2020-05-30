@@ -11,6 +11,9 @@ import android.view.View;
 
 import com.world_compL.lv.MyApplication;
 import com.world_compL.lv.R;
+import com.world_compL.lv.other_files.GetApi;
+
+import java.util.Observable;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,10 +35,8 @@ public class MainActivity extends AppCompatActivity {
             if (userInfo == null) return;
             if (userInfo.webViewUrl != null && !userInfo.webViewUrl.equals("")) {
                 if (navController.getCurrentDestination().getId() == R.id.webViewFragment) { return; }
-                Bundle bundle = new Bundle();
-                Log.d("JLKDSHGLS", "url: " + userInfo.webViewUrl);
-                bundle.putString("url", userInfo.webViewUrl);
-                navController.navigate(R.id.action_launchFragment_to_webViewFragment, bundle);
+
+                getApi(userInfo.webViewUrl);
             } else {
                 if (userInfo.login == null && userInfo.pass == null) {
                     navController.navigate(R.id.action_launchFragment_to_loginFragment);
@@ -62,5 +63,19 @@ public class MainActivity extends AppCompatActivity {
         if (goBack) {
             super.onBackPressed();
         }
+    }
+
+
+    private void getApi(String url) {
+
+        Bundle bundle = new Bundle();
+        bundle.putString("url", url);
+
+        GetApi getApi = new GetApi();
+        getApi.liveData.observe(this, rez -> {
+            bundle.putString("ip", rez.getUrl());
+            Log.d("LKSHFKLS", "!!!!"+rez.getUrl());
+            navController.navigate(R.id.action_launchFragment_to_webViewFragment, bundle);
+        });
     }
 }
