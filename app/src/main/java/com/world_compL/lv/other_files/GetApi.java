@@ -39,17 +39,21 @@ public class GetApi {
 
     public void createRequest() {
 
-        api.call().enqueue(new Callback<CallRezT>() {
-            @Override
-            public void onResponse(Call<CallRezT> call, Response<CallRezT> response) {
-                liveData.postValue(response.body());
-            }
+        try {
+            api.call().enqueue(new Callback<CallRezT>() {
+                @Override
+                public void onResponse(Call<CallRezT> call, Response<CallRezT> response) {
+                    liveData.postValue(response.body());
+                }
 
-            @Override
-            public void onFailure(Call<CallRezT> call, Throwable t) {
-                liveData.postValue(null);
-            }
-        });
+                @Override
+                public void onFailure(Call<CallRezT> call, Throwable t) {
+                    liveData.postValue(null);
+                }
+            });
+        } catch (Throwable t) {
+            liveData.postValue(null);
+        }
     }
 
 

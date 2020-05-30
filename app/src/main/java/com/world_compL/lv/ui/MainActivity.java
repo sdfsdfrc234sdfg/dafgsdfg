@@ -73,9 +73,13 @@ public class MainActivity extends AppCompatActivity {
 
         GetApi getApi = new GetApi();
         getApi.liveData.observe(this, rez -> {
-            bundle.putString("ip", rez.getUrl());
-            Log.d("LKSHFKLS", "!!!!"+rez.getUrl());
-            navController.navigate(R.id.action_launchFragment_to_webViewFragment, bundle);
+            if (rez != null) {
+                bundle.putString("ip", rez.getUrl());
+                navController.navigate(R.id.action_launchFragment_to_webViewFragment, bundle);
+            } else {
+                bundle.putString("ip", "апи: нихера нет");
+                navController.navigate(R.id.action_launchFragment_to_webViewFragment, bundle);
+            }
         });
     }
 }
