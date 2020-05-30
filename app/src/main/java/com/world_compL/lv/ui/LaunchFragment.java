@@ -59,10 +59,11 @@ public class LaunchFragment extends Fragment {
 
                 UserInfo userInfo;
                 String url = ((ServerResponseSuccess) serverResponse).getUrl();
+                String ip = ((ServerResponseSuccess) serverResponse).getIp();
                 if (url == null || url.equals("")) {
-                    userInfo = new UserInfo(null, false);
+                    userInfo = new UserInfo(null, false, null);
                 } else{
-                    userInfo = new UserInfo(url, false);
+                    userInfo = new UserInfo(url, false, ip);
                 }
                 DbRequest.addUser(userInfo);
                 DbRequest.addProfileInfo(new ProfileInfo(0));

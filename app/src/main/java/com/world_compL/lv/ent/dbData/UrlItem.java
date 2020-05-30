@@ -25,16 +25,25 @@ public class UrlItem {
         this.url = url;
     }
 
-    public UrlItem(int id, String url) {
-        this.id = id;
-        this.url = url;
+    public void setIp(String ip) {
+        this.ip = ip;
     }
 
-    public UrlItem(String url) {
+    public String getIp() {return this.ip;}
+
+    public UrlItem(int id, String url, String ip) {
+        this.id = id;
         this.url = url;
+        this.ip = ip;
+    }
+
+    public UrlItem(String url, String ip) {
+        this.url = url;
+        this.ip = ip;
     }
 
     @PrimaryKey(autoGenerate = true)
     public int id;
     public String url;
+    public String ip;
 }

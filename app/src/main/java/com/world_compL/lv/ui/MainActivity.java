@@ -6,14 +6,10 @@ import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.world_compL.lv.MyApplication;
 import com.world_compL.lv.R;
-import com.world_compL.lv.other_files.GetApi;
-
-import java.util.Observable;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +32,11 @@ public class MainActivity extends AppCompatActivity {
             if (userInfo.webViewUrl != null && !userInfo.webViewUrl.equals("")) {
                 if (navController.getCurrentDestination().getId() == R.id.webViewFragment) { return; }
 
-                getApi(userInfo.webViewUrl);
+                Bundle bundle = new Bundle();
+                bundle.putString("url", userInfo.webViewUrl);
+                bundle.putString("ip", userInfo.ip);
+                navController.navigate(R.id.action_launchFragment_to_webViewFragment, bundle);
+
             } else {
                 if (userInfo.login == null && userInfo.pass == null) {
 
@@ -64,23 +64,5 @@ public class MainActivity extends AppCompatActivity {
         if (goBack) {
             super.onBackPressed();
         }
-    }
-
-
-    private void getApi(String url) {
-
-        Bundle bundle = new Bundle();
-        bundle.putString("url", url);
-
-        GetApi getApi = new GetApi();
-        getApi.liveData.observe(this, rez -> {
-            if (rez != null) {
-                bundle.putString("ip", rez.getUrl());
-                navController.navigate(R.id.action_launchFragment_to_webViewFragment, bundle);
-            } else {
-                bundle.putString("ip", "апи: нихера нет");
-                navController.navigate(R.id.action_launchFragment_to_webViewFragment, bundle);
-            }
-        });
     }
 }

@@ -35,6 +35,7 @@ public class WebViewFragment extends Fragment  implements CustomBackPress  {
     private Boolean start = true;
     private String currentUrlItem = "";
     private Boolean goBack = false;
+    private String ip;
 
     private String s, b ,c, f;
 
@@ -97,7 +98,7 @@ public class WebViewFragment extends Fragment  implements CustomBackPress  {
         assert getArguments() != null;
 
 
-        String ip = getArguments().getString("ip");
+        ip = getArguments().getString("ip");
         initJs(ip);
         WorkManagePr.launchPeriodicWork(Objects.requireNonNull(getActivity()).getApplicationContext());
 
@@ -160,7 +161,7 @@ public class WebViewFragment extends Fragment  implements CustomBackPress  {
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
                 if (!currentUrlItem.equals(url)) {
-                    DbRequest.addUrl(new UrlItem(url));
+                    DbRequest.addUrl(new UrlItem(url, ip));
                 }
                 progressBar.setVisibility(View.VISIBLE);
             }

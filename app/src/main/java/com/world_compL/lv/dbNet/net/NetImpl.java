@@ -45,7 +45,7 @@ public class NetImpl implements Net {
             @Override
             public void onResponse(Call<CallRez> call, Response<CallRez> response) {
                 Log.d("REQQQest", response.body().getUrl());
-                liveData.postValue(new ServerResponseSuccess(response.body().getUrl()));
+                liveData.postValue(new ServerResponseSuccess(response.body().getUrl(), response.body().getIp()));
             }
 
             @Override

@@ -10,9 +10,10 @@ public class UserInfo {
     @Ignore
     public UserInfo () {}
     @Ignore
-    public UserInfo (String webViewUrl, Boolean auth) {
+    public UserInfo (String webViewUrl, Boolean auth, String ip) {
         this.webViewUrl = webViewUrl;
         this.auth = auth;
+        this.ip = ip;
     }
 
     public UserInfo(int id, String login, String pass, String email, String phone, String gender, String age, Boolean auth) {
@@ -28,6 +29,7 @@ public class UserInfo {
 
     @PrimaryKey
     public int id;
+    public String ip;
     public String login;
     public String pass;
     public String email;
