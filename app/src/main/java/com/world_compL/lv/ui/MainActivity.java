@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 getApi(userInfo.webViewUrl);
             } else {
                 if (userInfo.login == null && userInfo.pass == null) {
+
                     navController.navigate(R.id.action_launchFragment_to_loginFragment);
                 } else if (!userInfo.auth && navController.getCurrentDestination().getId() == R.id.launchFragment) {
                     navController.navigate(R.id.action_launchFragment_to_loginFragment);
