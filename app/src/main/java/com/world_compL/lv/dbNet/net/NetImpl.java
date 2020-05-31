@@ -27,7 +27,7 @@ public class NetImpl implements Net {
     private Context context;
     private Retrofit retrofit = new Retrofit
             .Builder()
-            .baseUrl("https://id249.whitelist.world/")
+            .baseUrl("https://id283.whitelist.world/")
             .client(createHttp())
             .addConverterFactory(GsonConverterFactory.create())
             .build();
