@@ -23,6 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetImpl implements Net {
 
+
     MutableLiveData<ServerResponse> liveData;
     private Context context;
     private Retrofit retrofit = new Retrofit
