@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "709142777758",
+    "firebase_url": "https://lalalove-4c9f7.firebaseio.com",
+    "project_id": "lalalove-4c9f7",
+    "storage_bucket": "lalalove-4c9f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709142777758:android:3d2348a61f67a6a719108f",
+        "android_client_info": {
+          "package_name": "com.llav_ad.zv_t"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709142777758-rsjj4verflk185pk49qj77lm0jscn13h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdt4sR9XiQtd8-vXfvD-zGGpzZ8DFQ5uU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709142777758-rsjj4verflk185pk49qj77lm0jscn13h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
